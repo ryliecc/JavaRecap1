@@ -36,25 +36,25 @@ public class JavaRecap1Test {
     }
 
     @Test
-    void isPasswordValid_whenInputContainsUpperAndLowerCase_returnTrue(){
-        String password = "TEST;123test";
-        boolean actual = JavaRecap1.isPasswordValid(password);
+    void isPasswordWithUpperAndLowerCase_whenInputContainsUpperAndLowerCase_returnTrue(){
+        String password = "TEST123test";
+        boolean actual = JavaRecap1.isPasswordWithUpperAndLowerCase(password);
         boolean expected = true;
         assertEquals(expected, actual);
     }
 
     @Test
-    void isPasswordWithLowerCase_whenInputContainsOnlyUpperCase_returnFalse(){
+    void isPasswordWithUpperAndLowerCase_whenInputContainsOnlyUpperCase_returnFalse(){
         String password = "TEST1234";
-        boolean actual = JavaRecap1.isPasswordWithLowerCase(password);
+        boolean actual = JavaRecap1.isPasswordWithUpperAndLowerCase(password);
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
     @Test
-    void isPasswordWithUpperCase_whenInputContainsOnlyLowerCase_returnFalse(){
+    void isPasswordWithUpperAndLowerCase_whenInputContainsOnlyLowerCase_returnFalse(){
         String password = "test1234";
-        boolean actual = JavaRecap1.isPasswordWithUpperCase(password);
+        boolean actual = JavaRecap1.isPasswordWithUpperAndLowerCase(password);
         boolean expected = false;
         assertEquals(expected, actual);
     }

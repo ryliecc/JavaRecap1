@@ -12,10 +12,7 @@ public class JavaRecap1 {
         if(!isPasswordWithNumbers(password)){
             return false;
         }
-        if(!isPasswordWithUpperCase(password)){
-            return false;
-        }
-        if(!isPasswordWithLowerCase(password)){
+        if(!isPasswordWithUpperAndLowerCase(password)){
             return false;
         }
         if(!isPasswordWeak(password)){
@@ -37,14 +34,10 @@ public class JavaRecap1 {
         return StringUtils.containsAny(password, numbers);
     }
 
-    public static boolean isPasswordWithUpperCase(String password){
+    public static boolean isPasswordWithUpperAndLowerCase(String password){
         String UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        return StringUtils.containsAny(password, UpperCase);
-    }
-
-    public static boolean isPasswordWithLowerCase(String password){
         String LowerCase = "abcdefghijklmnopqrstuvwxyz";
-        return StringUtils.containsAny(password, LowerCase);
+        return StringUtils.containsAny(password, UpperCase) && StringUtils.containsAny(password, LowerCase);
     }
 
     public static boolean isPasswordWeak(String password){
