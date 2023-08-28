@@ -1,7 +1,4 @@
 import org.junit.jupiter.api.Test;
-
-import java.time.chrono.JapaneseChronology;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JavaRecap1Test {
