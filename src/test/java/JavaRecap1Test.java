@@ -32,7 +32,7 @@ public class JavaRecap1Test {
 
     @Test
     void isPasswordValid_whenInputContainsNoNumbers_returnFalse(){
-        String password = "testtest";
+        String password = "testTEST";
         boolean actual = JavaRecap1.isPasswordValid(password);
         boolean expected = false;
         assertEquals(expected, actual);
