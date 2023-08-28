@@ -21,6 +21,9 @@ public class JavaRecap1 {
         if(!isPasswordWeak(password)){
             return false;
         }
+        if(!isPasswordWithSpecialChars(password)){
+            return false;
+        }
 
         return true;
     }
@@ -52,5 +55,10 @@ public class JavaRecap1 {
             }
         }
         return true;
+    }
+
+    public static boolean isPasswordWithSpecialChars(String password){
+        String specialChars = "@~#_^*%/.+-:;=";
+        return StringUtils.containsAny(password, specialChars);
     }
 }
