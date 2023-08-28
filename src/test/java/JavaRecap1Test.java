@@ -61,4 +61,20 @@ public class JavaRecap1Test {
         boolean expected = false;
         assertEquals(expected, actual);
     }
+
+    @Test
+    void isPasswordValid_whenInputContainsPassword_returnFalse(){
+        String password = "password123T";
+        boolean actual = JavaRecap1.isPasswordValid(password);
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void isPasswordValid_whenInputContains123456_returnFalse(){
+        String password = "Password123456";
+        boolean actual = JavaRecap1.isPasswordValid(password);
+        boolean expected = false;
+        assertEquals(expected, actual);
+    }
 }
