@@ -1,13 +1,11 @@
+import org.apache.commons.lang3.StringUtils;
+
 public class JavaRecap1 {
     public static void main(String[] args) {
 
     }
 
     public static boolean isPasswordValid(String password) {
-        int passwordLength = password.length();
-        if(passwordLength >= 8){
-            return true;
-        }
-        return false;
+        return password.length() >= 8 && StringUtils.containsAny(password, "1234567890");
     }
 }
