@@ -13,7 +13,7 @@ public class JavaRecap1Test {
 
     @Test
     void isPasswordValid_whenInputIs7Chars_returnFalse(){
-        String password = "Test123,";
+        String password = "Test12,";
         boolean actual = JavaRecap1.isPasswordValid(password);
         boolean expected = false;
         assertEquals(expected, actual);
