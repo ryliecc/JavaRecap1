@@ -90,4 +90,12 @@ public class JavaRecap1Test {
         boolean expected = false;
         assertEquals(expected, actual);
     }
+
+    @Test
+    void isPasswordValid_whenInputChecksAllBoxes_returnTrue(){
+        String password = "t3sTing@som3thinG";
+        boolean actual = JavaRecap1.isPasswordValid(password);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
 }
